@@ -119,7 +119,7 @@ const Drawio: FC<DrawioProps> = ({
     const json = JSON.stringify(data)
     el.current!.dataset.mxgraph = json
     setTip('')
-    setTimeout(() => {
+    requestAnimationFrame(() => {
       GraphViewer.createViewerForElement(el.current!)
     }, 0)
   }, [])
